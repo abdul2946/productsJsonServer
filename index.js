@@ -1,11 +1,11 @@
-import { create, router as _router, defaults } from "json-server";
-const server = create();
+const jsonServer = require("json-server")
+const server = jsonServer.create();
 
-const router = _router("products.json");
+const router = jsonServer.router("products.json");
 
-const middlewares = defaults();
+const middlewares = jsonServer.defaults();
 
-const port = process.env.PORT
+const port = process.env.PORT || 8000
 
 server.use(middlewares);
 server.use(router);
