@@ -5,7 +5,7 @@ const router = _router("products.json");
 
 const middlewares = defaults();
 
-const port = process.env.PORT
+const port = process.env.PORT || 8000
 
 server.use(middlewares);
 server.use(router);
